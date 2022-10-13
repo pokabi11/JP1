@@ -46,9 +46,8 @@ public class Account {
     }
 
     public void debit(int amount){
-        Account user = new Account();
         if(amount >=0){
-            user.setBalance(this.balance - amount);
+            this.setBalance(this.balance - amount);
         }else{
             System.out.println("Invalid amount");
         }
@@ -58,8 +57,8 @@ public class Account {
     public void transferTo(Account user2,int amount){
 
         if(amount >=0 && this.balance>amount){
-            this.setBalance(this.balance - amount);
-            user2.setBalance(this.balance + amount);
+            this.debit(amount);
+            user2.credit(amount);
         }else{
             System.out.println("Cannot make Transaction: not enough money left");
         }

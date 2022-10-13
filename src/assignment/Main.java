@@ -11,7 +11,10 @@ public class Main {
         Account user = new Account("a1","abc xyz",100);
         Account user2 = new Account("b1","aaa zzz",100);
 
-        user.transferTo(user2,10);
-        System.out.println(user.balance);
+        user.credit(100);
+
+        user.transferTo(user2,20);
+        System.out.println(user.getBalance());
+        System.out.println(user2.getBalance());
     }
 }
