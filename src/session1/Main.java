@@ -30,9 +30,11 @@ public class Main {
         System.out.println("Nhập cạnh thứ 2:");
         abc.setVar2(sc.nextInt());
         System.out.println("Nhập cạnh thứ 3:");
-        abc.setVar(sc.nextInt());
+        abc.setVar3(sc.nextInt());
 
         abc.outputchuvi();
         abc.outputdientich();
+//==========================================
+
     }
 }

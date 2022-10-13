@@ -3,7 +3,7 @@ package session1;
 import javax.swing.plaf.synth.SynthSliderUI;
 
 public class Student {
-    String name;
+    public String name;
     int age;
 
     public void showInfo(){
