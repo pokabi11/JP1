@@ -1,22 +1,22 @@
 package assignment;
 
 public class Account {
-    String id;
-    String name;
-    double balance;
+    private Integer id;
+    private String name;
+    private double balance;
 
     public Account(){}
-    public Account(String id, String name, double balance) {
+    public Account(Integer id, String name, double balance) {
         this.id = id;
         this.name = name;
         this.balance = balance;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -38,6 +38,8 @@ public class Account {
 
     public void credit(int amount){
 
+//        setBalance(getBalance()+(amount>0?amount:0));
+
         if(amount >=0){
             this.setBalance(this.balance + amount);
         }else{
@@ -46,6 +48,9 @@ public class Account {
     }
 
     public void debit(int amount){
+
+
+
         if(amount >=0){
             this.setBalance(this.balance - amount);
         }else{

@@ -2,10 +2,22 @@ package session2;
 
 import session1.Student;
 
+import java.util.ArrayList;
+
 public class FptStudent {
     String Code;
     String name;
     String tel;
+    ArrayList<String> paymentMethods = new ArrayList<>();
+    private int Mark;
+
+    public int getMark() {
+        return Mark;
+    }
+
+    public void setMark(int mark) {
+        Mark = mark;
+    }
 
     public FptStudent(){
         System.out.println("FPTStu");
@@ -22,7 +34,7 @@ public class FptStudent {
     }
 
     public void run(){
-
+        System.out.println("Print SUPERclass content");
     }
     public void run (int x){
 
