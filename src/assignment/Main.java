@@ -8,13 +8,17 @@ public class Main {
 //        Fraction tt = t2.add(t1);
 //        Fraction ttt = t.add(tt);
 
-        Account user = new Account(123,"abc xyz",100);
-        Account user2 = new Account(113,"aaa zzz",100);
+//        Account user = new Account(123,"abc xyz",100);
+//        Account user2 = new Account(113,"aaa zzz",100);
+//
+//        user.credit(100);
+//        user.debit(20);
+//
+//        user.transferTo(user2,20);
+//        System.out.println(user.getBalance());
+//        System.out.println(user2.getBalance());
+//        System.out.println(user.debit(20));
 
-        user.credit(100);
 
-        user.transferTo(user2,20);
-        System.out.println(user.getBalance());
-        System.out.println(user2.getBalance());
     }
 }

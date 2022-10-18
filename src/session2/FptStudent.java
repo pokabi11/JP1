@@ -37,9 +37,9 @@ public class FptStudent {
         System.out.println("Print SUPERclass content");
     }
     public void run (int x){
-
+        System.out.println("Print SUPERclass 123 content");
     }
     public void run (int x, String H){
-
+        System.out.println("Print SUPERclass xyz content");
     }
 }

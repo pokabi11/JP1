@@ -1,17 +1,15 @@
 package assignment;
 
 public class Invoice {
-    public Integer id;
-    public String name;
-    public String invoiceDate;
-    public String usage;
-    public Integer amount;
+    private Integer id;
+    private String name;
+    private String invoiceDate;
+    private Integer amount;
 
-    public Invoice (Integer id, String name, String invoiceDate,String usage, Integer amount){
+    public Invoice (Integer id, String name, String invoiceDate, Integer amount){
         this.id=id;
         this.name = name;
         this.invoiceDate = invoiceDate;
-        this.usage = usage;
         this.amount = amount;
     }
 
@@ -39,13 +37,6 @@ public class Invoice {
         this.invoiceDate = invoiceDate;
     }
 
-    public String getUsage() {
-        return usage;
-    }
-
-    public void setUsage(String usage) {
-        this.usage = usage;
-    }
 
     public Integer getAmount() {
         return amount;
@@ -55,9 +46,8 @@ public class Invoice {
         this.amount = amount;
     }
 
-    public void payType1(Integer amount){
-        if(amount >=0){
-
-        }
+    public double payType1(){
+        return 2000*getAmount();
     }
+
 }

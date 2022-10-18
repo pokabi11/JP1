@@ -47,14 +47,15 @@ public class Account {
         }
     }
 
-    public void debit(int amount){
+    public boolean debit(int amount){
 
 
 
         if(amount >=0){
             this.setBalance(this.balance - amount);
+            return true;
         }else{
-            System.out.println("Invalid amount");
+            return false;
         }
     }
 
