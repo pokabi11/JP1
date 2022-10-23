@@ -7,12 +7,15 @@ public class Main {
         try {
             int a=10;
             int b=0;
+            if(a>5){
+                throw new Exception("số to quá k chia đc");
+            }
             int c=a/b;
             System.out.println("c = "+c);
         }catch (ArithmeticException e){                             //arithmeticException < Exception
-            System.out.println("Arithmetic Errors nay fix de");
+            System.out.println(e.getMessage());
         }catch (Exception e){
-            System.out.println("Errors nay fix di");
+            System.out.println(e.getMessage());
         }finally {
             //catch hay k catch thì flow vẫn chạy qua đây.
         }
