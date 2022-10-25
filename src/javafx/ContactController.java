@@ -22,12 +22,6 @@ public class ContactController {
 
     private ObservableList<Contact> ls = FXCollections.observableArrayList();
 
-    public Text strName;
-    public Text strEmail;
-    public Text strAddress;
-    public Text strAge;
-    public Text strTel;
-
 
     private ArrayList<String> ls1 = new ArrayList<>();
 
