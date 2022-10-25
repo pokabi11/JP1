@@ -4,10 +4,10 @@ public class Contact {
     private String name;
     private String email;
     private String address;
-    private String age;
+    private Integer age;
     private String tel;
 
-    public Contact(String name, String email, String address, String age, String tel){
+    public Contact(String name, String email, String address, Integer age, String tel){
         this.name = name;
         this.email = email;
         this.address = address;
