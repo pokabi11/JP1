@@ -17,7 +17,7 @@ public class AssdfkController {
     public TextField txtName;
     public TextField txtEmail;
     public TextField txtScore;
-    public ListView<Assdfk> lvStudents;
+    public ListView<Assdfk> lvAssdfk;
 
     ObservableList<Assdfk> ls = FXCollections.observableArrayList();
     private boolean sortName = true;
@@ -30,7 +30,7 @@ public class AssdfkController {
             if (score < 0 || score >10)
                 throw new Exception("nhap lai");
             ls.add(new Assdfk(name,email,score));
-            lvStudents.setItems(ls);
+            lvAssdfk.setItems(ls);
         }catch (Exception e) {
 //            Alert alert = new Alert(Alert.AlertType.ERROR);
 //            alert.setTitle("loi!");
@@ -47,7 +47,7 @@ public class AssdfkController {
             }
         });
         sortName = !sortName;
-        lvStudents.refresh();
+        lvAssdfk.refresh();
     }
 
     public void goToContact(ActionEvent event) throws Exception {
@@ -65,6 +65,6 @@ public class AssdfkController {
             }
         });
         sortScore = !sortScore;
-        lvStudents.refresh();
+        lvAssdfk.refresh();
     }
 }

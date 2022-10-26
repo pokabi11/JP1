@@ -1,7 +1,7 @@
 package javafx.list;
 
-import javafx.Assdfk;
 import javafx.Main;
+import javafx.Assdfk;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.create.CreateController;
@@ -21,7 +21,9 @@ public class ListController {
         Scene sc = new Scene(createForm,800,600);
         Main.rootStage.setScene(sc);
     }
-    public void edit(){
-        CreateController.editAssdfk = lv.getSelectionModel().getSelectedItem();
+
+    public void edit() {
+        CreateController.editedAssdfk = lv.getSelectionModel().getSelectedItem();
+
     }
 }

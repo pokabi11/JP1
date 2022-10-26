@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.AssdfkController">
+   <children>
+      <ListView fx:id="lvStudents" layoutX="300.0" layoutY="14.0" prefHeight="374.0" prefWidth="288.0" />
+      <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <TextField fx:id="txtName" layoutX="14.0" layoutY="64.0" text="name" />
+      <TextField fx:id="txtEmail" layoutX="14.0" layoutY="91.0" text="email" />
+      <TextField fx:id="txtScore" layoutX="14.0" layoutY="118.0" text="score" />
+      <Button onAction="#sortByName" layoutX="14.0" layoutY="154.0" mnemonicParsing="false" text="Sort name" />
+      <Button onAction="#sortByScore" layoutX="100.0" layoutY="154.0" mnemonicParsing="false" text="Sort score" />
+      <Button layoutX="10.0" layoutY="188.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+   </children>
+</Pane>
