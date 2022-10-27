@@ -22,8 +22,11 @@ public class ListController {
         Main.rootStage.setScene(sc);
     }
 
-    public void edit() {
-        CreateController.editedAssdfk = lv.getSelectionModel().getSelectedItem();
+    public void edit(ActionEvent event) throws Exception {
+        CreateController.editedStudent = lv.getSelectionModel().getSelectedItem();
+        Parent createForm = FXMLLoader.load(getClass().getResource("../edit/edit.fxml"));
+        Scene sc = new Scene(createForm,800,600);
+        Main.rootStage.setScene(sc);
 
     }
 }

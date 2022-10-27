@@ -6,25 +6,25 @@
 <?import javafx.scene.layout.*?>
 
 
-<Pane fx:controller="javafx.create.EditController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="javafx.edit.EditController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Text layoutX="337.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a Student">
+        <Text layoutX="337.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Student">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
         <Button onAction="#backToList" layoutX="44.0" layoutY="27.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="81.0" text="&lt;&lt; Back" />
-        <TextField layoutX="176.0" layoutY="127.0" prefHeight="35.0" prefWidth="447.0" promptText="Name">
+        <TextField fx:id="txtName" layoutX="176.0" layoutY="127.0" prefHeight="35.0" prefWidth="447.0" promptText="Name">
             <font>
                 <Font size="15.0" />
             </font>
         </TextField>
-        <TextField layoutX="176.0" layoutY="193.0" prefHeight="35.0" prefWidth="447.0" promptText="Email">
+        <TextField fx:id="txtEmail" layoutX="176.0" layoutY="193.0" prefHeight="35.0" prefWidth="447.0" promptText="Email">
             <font>
                 <Font size="15.0" />
             </font>
         </TextField>
-        <TextField layoutX="177.0" layoutY="259.0" prefHeight="35.0" prefWidth="447.0" promptText="Mark">
+        <TextField fx:id="txtScore" layoutX="177.0" layoutY="259.0" prefHeight="35.0" prefWidth="447.0" promptText="Score">
             <font>
                 <Font size="15.0" />
             </font>
