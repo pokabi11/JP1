@@ -2,15 +2,36 @@ package javafx.create;
 
 import javafx.Main;
 import javafx.Assdfk;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.list.ListController;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-public class CreateController {
-    public static Assdfk editedStudent;
+import java.net.URL;
+import java.util.ResourceBundle;
+import java.sql.*;
+
+public class CreateController implements Initializable {
     public TextField txtName;
+    public TextField txtEmail;
+    public TextField txtScore;
+    public ComboBox<String> cbGender;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ObservableList<String> genders = FXCollections.observableArrayList();
+        genders.add("Nam");
+        genders.add("Nữ");
+        genders.add("Khác");
+        cbGender.setItems(genders);
+    }
 
     public void backToList(ActionEvent event) throws Exception{
         Parent listScene = FXMLLoader.load(getClass().getResource("../list/list.fxml"));
@@ -18,10 +39,31 @@ public class CreateController {
         Main.rootStage.setScene(sc);
     }
 
-    public void submit(ActionEvent event) throws Exception{
-        
-        // them sv
-        // xong
-        backToList(null);
+    public void submit(ActionEvent event){
+        try {
+            Integer m = Integer.parseInt(txtScore.getText());
+            if(m<0 || m > 10)
+                throw new Exception("Điểm thi không hợp lệ");
+            // them sv
+            Assdfk a=  new Assdfk(null,txtName.getText(),txtEmail.getText(),m,cbGender.getValue());
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(ListController.connectionString,ListController.user,ListController.pwd);
+            Statement stt = conn.createStatement();
+            String sql_txt = "insert into students(name,email,score,gender) values('"
+                    +txtName.getText()+"','"
+                    +txtEmail.getText()+"',"
+                    +m
+                    +",'"+cbGender.getValue()+"')"
+                    ;
+            stt.executeUpdate(sql_txt);
+            // xong
+            backToList(null);
+        }catch (Exception e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error!");
+            alert.setHeaderText(e.getMessage());
+            alert.show();
+        }
+
     }
 }
