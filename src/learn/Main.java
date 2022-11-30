@@ -12,11 +12,15 @@ import java.util.Scanner;
 public class Main   {
 
     public static void main(String[] args) {
+
+    }
+
+    public static void main4(String[] args) {
         ArrayList<Integer> ar = new ArrayList<>();
-        for (int i = 0; i < 10;i++) {
+        for (int i = 10; i > 0;i--) {
             ar.add(i);
         }
-        ar.stream().filter(abc -> abc >5).forEach(a -> System.out.print(a + " "));
+        ar.stream().sorted().forEach(a -> System.out.print(a + " "));
         ar.stream().filter(abc -> abc >5).peek(abc -> System.out.print(abc + " ")).count();
     }
 
