@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="exam031222.BookController">
+    <children>
+        <Text layoutX="337.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a Book">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <TextField fx:id="txtId" layoutX="176.0" layoutY="127.0" prefHeight="35.0" prefWidth="447.0" promptText="Book Id">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtTitle" layoutX="176.0" layoutY="193.0" prefHeight="35.0" prefWidth="447.0" promptText="Book Title">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtAuthor" layoutX="177.0" layoutY="259.0" prefHeight="35.0" prefWidth="447.0" promptText="Author">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <Button layoutX="177.0" layoutY="415.0" mnemonicParsing="false" onAction="#submit" prefHeight="35.0" prefWidth="447.0" style="-fx-background-color: orange;" text="Submit" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+      <TextField fx:id="txtPrice" layoutX="177.0" layoutY="324.0" prefHeight="35.0" prefWidth="447.0" promptText="Price">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button layoutX="177.0" layoutY="370.0" mnemonicParsing="false" onAction="#add" prefHeight="35.0" prefWidth="447.0" style="-fx-background-color: orange;" text="Add" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button onAction="#showBook" layoutX="75.0" layoutY="27.0" mnemonicParsing="false" text="List Book" />
+    </children>
+</Pane>
