@@ -1,6 +1,5 @@
 package exam031222;
 
-import javafx.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

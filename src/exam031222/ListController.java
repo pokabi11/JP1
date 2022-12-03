@@ -1,7 +1,6 @@
 package exam031222;
 
 import database.Connector;
-import javafx.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -54,7 +53,7 @@ public class ListController implements Initializable {
 
     }
 
-    public void createStudent(ActionEvent event) throws Exception{
+    public void btnCreate(ActionEvent event) throws Exception{
         Parent createForm = FXMLLoader.load(getClass().getResource("create.fxml"));
         Scene sc = new Scene(createForm,800,600);
         Main.rootStage.setScene(sc);
