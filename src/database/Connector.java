@@ -24,7 +24,7 @@ public class Connector {
         this.conn = DriverManager.getConnection(connectionString, user, pwd);
     }
 
-    private Statement getStatement() throws Exception{
+    public Statement getStatement() throws Exception{
         return this.conn.createStatement();
     }
 

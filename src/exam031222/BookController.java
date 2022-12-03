@@ -24,8 +24,8 @@ public class BookController {
     public void submit(ActionEvent event) throws Exception {
         Connector cnn = Connector.getInstance();
         for(Book i:bookList){
-            String sql = String.format("INSERT INTO 'book' VALUES ('%s','%s','%s',%d)",i.getId(),i.getTitle(),i.getAuthor(),i.getPrice());
-            cnn.execute(sql);
+            String sql = String.format("INSERT INTO `book` VALUES ('%s','%s','%s',%d)",i.getId(),i.getTitle(),i.getAuthor(),i.getPrice());
+            cnn.getStatement().executeUpdate(sql);
         }
     }
 
